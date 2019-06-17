@@ -1,4 +1,4 @@
 # kanbrello 
 
 ## description
-kanbrello is an app made with electron js that help people to manage thier work  by a kanban way 
+kanbrello is an app made with React js that help people to manage thier work  by a kanban way 

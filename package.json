@@ -1,0 +1,25 @@
+{
+  "name": "kanbrello",
+  "version": "0.0.1",
+  "description": "kanbrello is kanban management system that help people to manage theire work ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev" : "nodemon index.js",
+    "start-electron": "electron index.js"
+  },
+  "keywords": [
+    "kanban",
+    "kanban-react",
+    "electron-kanban",
+    "trello-clone"
+  ],
+  "author": "laridev larbibaraka hakim adagio",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^5.0.4"
+  },
+  "dependencies": {
+    "nodemon": "^1.19.1"
+  }
+}

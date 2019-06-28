@@ -6,7 +6,7 @@ var cors =  require('cors');
 require('dotenv').config();
 
 
-var registerRouter = require('./server/routes/register');
+var userRouter = require('./server/routes/user');
 
 var app = express();
 
@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 
-app.use('/api/users', registerRouter);
+app.use('/api/users', userRouter);
 
 app.listen(3000,()=>{
     console.log('server is working on port 3000')

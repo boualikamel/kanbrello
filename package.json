@@ -4,7 +4,7 @@
   "description": "kanbrello is kanban management system that help people to manage theire work ",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
+    "dev": "nodemon app.js",
     "start": "nodemon server/bin/www"
   },
   "keywords": [
@@ -17,6 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "@hapi/joi": "^15.0.3",
+    "bcrypt": "^3.0.6",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv": "^8.0.0",

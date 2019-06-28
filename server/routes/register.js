@@ -1,18 +1,14 @@
+
+const { register } = require('../controllers/registerController');
+
 var router = require('express').Router();
-import { register } from '../controllers/registerController';
+
 
 
 //add register route
-router.post('/register' , async (req, res)=>{
-    try {
-         const user = await register();
-         res.json({
-             success : true            
-         });
-    }catch(err){
-        res.status(400).json({
-                success : false            
-            });
-    }
+router.post('/register' ,  async(req, res)=>{
+   
+    const user = await register(req, res);
+     
 });
 module.exports = router;

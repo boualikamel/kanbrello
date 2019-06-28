@@ -5,8 +5,8 @@ var logger = require('morgan');
 var cors =  require('cors');
 require('dotenv').config();
 
-var indexRouter = require('./routes/index');
-var registerRouter = require('./routes/register');
+
+var registerRouter = require('./server/routes/register');
 
 var app = express();
 
@@ -16,7 +16,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use('/', indexRouter);
+
 app.use('/api/users', registerRouter);
 
+app.listen(3000,()=>{
+    console.log('server is working on port 3000')
+})
 module.exports = app;

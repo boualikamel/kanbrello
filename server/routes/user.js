@@ -1,5 +1,5 @@
 const { register } = require('../controllers/registerController');
-const { login } = require('../controllers/loginController');
+const { login , logout } = require('../controllers/loginController');
 var router = require('express').Router();
 //add register route
 router.post('/register' ,  async(req, res)=>{
@@ -19,10 +19,22 @@ router.post('/login' , async(req, res)=>{
             const user =  await login(req, res);
         }catch(err){
             res.status(400).json({
-                succss : false
+                succss : false,
+                err : err
             })
         }
        
 })
 
+//logout
+router.post('/logout' , async(req,res)=>{
+    try {
+        const user =  await logout(req, res);
+    }catch(err){
+        res.status(400).json({
+            succss : false,
+            err : err
+        })
+    }
+})
 module.exports = router;
